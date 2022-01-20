@@ -3,7 +3,7 @@ spring:
     hibernate:
      ddl-auto: update
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_movies?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_employees?useTimezone=true&serverTimezone=UTC
     username: ${MYSQL_USER:root}
     password: ${MYSQL_PASS:pass}
 
