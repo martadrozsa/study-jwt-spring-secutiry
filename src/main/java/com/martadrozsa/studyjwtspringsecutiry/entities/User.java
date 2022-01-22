@@ -3,22 +3,26 @@ package com.martadrozsa.studyjwtspringsecutiry.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
+
+@ToString
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Employee {
+@Entity
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column
     private String name;
 
+    @Column(unique = true)
+    private String login;
+
+    @Column
+    private String password;
 }
